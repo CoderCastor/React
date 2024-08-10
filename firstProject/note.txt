@@ -1,0 +1,26 @@
+install Tabnine
+install prettier
+
+
+ npm create vite@latest
+ ✔ Project name: … firstProject
+
+
+Done. Now run:
+
+  cd firstProject
+  npm install
+  npm run dev
+
+
+
+
+1) create componants ---side bar elements
+make only one elements and fetching real data repeat the same
+
+
+
+tailwindNotes -->
+w-full h-screen   maindiv
+
+w-fit     ==== content size
