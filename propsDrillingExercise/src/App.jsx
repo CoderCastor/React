@@ -13,7 +13,7 @@ function App() {
     ];
 
 
-    const handleClick = (index) => {
+    const handleClick = (index) => {      
         setSongData((prev)=>{
           return prev.map((item,itemIndex)=>{
             if(itemIndex == index) return {...item, added: !item.added};
@@ -27,10 +27,10 @@ function App() {
   return (
     <>
       <div className="w-full h-screen bg-zinc-300">
-      <Navbar/>
+      <Navbar data={songData}/>
       <div className="px-20 flex gap-10 mt-10 flex-wrap">
         
-        {data.map((obj,index)=>{
+        {songData.map((obj,index)=>{
           return <Card data={obj} handleClick={handleClick} index={index} key={index}/>
         })}
         
