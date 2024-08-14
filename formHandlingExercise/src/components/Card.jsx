@@ -1,10 +1,12 @@
 import React from "react";
 
 function Card({ users }) {
+    console.log(users);
+    
   return (
     <>
         {users.map((item, index) => {
-                return <div className="w-52 h-full bg-zinc-100 rounded-lg flex flex-col items-center p-2">
+                return (<div className="w-52 h-full bg-zinc-100 rounded-lg flex flex-col items-center p-2">
                   <div className="image w-[4vw] h-[4vw] rounded-full bg-zinc-200 overflow-hidden">
                     <img className="h-full w-full object-cover" src="" alt="" srcset="" />
                   </div>
@@ -17,7 +19,7 @@ function Card({ users }) {
                   <button className="px-3 py-1 bg-red-600 text-xs rounded-md font-semibold text-white mt-4 ">
                     Remove It
                   </button>
-                </div>
+                </div>)
               })
         }
     </>
