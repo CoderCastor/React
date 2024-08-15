@@ -1,11 +1,18 @@
 import React from 'react'
 import Boxes from './components/Boxes'
+import { useState } from 'react'
 
 function App() {
 
-  const handleClick = (event) => {
-    console.log(event.innerHTML)
+  const handleClick = (index) => {
+    colors.map((color, num)=> {
+      if(num === index){
+        setBgColor(color.color)
+      }
+    })
   }
+
+  const [bgColor, setBgColor] = useState("bg-zinc-800")
 
   const colors = [
     {color : "bg-red-700", name: "Red"},
@@ -21,7 +28,7 @@ function App() {
   ]
 
   return (
-    <div className='h-screen w-full bg-black flex justify-center items-center py-28'>
+    <div className={`h-screen w-full flex ${bgColor} justify-center items-center py-28`}>
       <Boxes colors={colors} handleClick={handleClick} />
     </div>
   )
