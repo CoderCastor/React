@@ -1,12 +1,21 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 function User() {
   return (
-    <div className='w-full flex justify-center items-center'>
-      <div className='p-5 w-[50%] bg-zinc-300 flex flex-col justify-center items-center'>
-        <h1 className='mb-10 text-5xl font-extrabold'>User</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error recusandae, harum nemo voluptate iusto hic pariatur fuga maxime illum nulla eum assumenda fugit at molestiae vel, corporis quis atque. Aliquam hic deserunt quisquam dignissimos officia ducimus ex, assumenda expedita sed, nobis perspiciatis accusantium quae voluptatem iure illo nemo adipisci quos nulla tempora impedit alias sint ullam ipsam magni. Natus tempore facilis odio, illo eligendi, nam dolor blanditiis aspernatur iste quaerat quo esse harum? Optio id quam recusandae accusantium dicta a officia in exercitationem quisquam! Rerum nesciunt rem suscipit quo nostrum blanditiis quia ea ratione officiis eos quos dolore, reprehenderit deserunt.</p>
+    <div className='w-full flex justify-center items-center flex-col gap-16'>
+      <div className='p-5 w-[50%] flex flex-col justify-center items-center'>
+        <h1 className='mb-10 text-5xl bg-zinc-300 p-4 rounded-3xl font-extrabold'>User</h1>
+        <div className='mt-3 flex flex-col font-semibold'>
+          <Link className='bg-red-200 rounded-lg mb-4 px-24 py-5 text-3xl text-zinc-900 hover:bg-red-300' to="/user/Castor">Castor</Link>
+          <Link className='bg-red-200 rounded-lg mb-4 px-24 py-5 text-3xl text-zinc-900 hover:bg-red-300' to="/user/George">George</Link>
+          <Link className='bg-red-200 rounded-lg mb-4 px-24 py-5 text-3xl text-zinc-900 hover:bg-red-300' to="/user/Tanhaji">Tanhaji</Link>
+
+        </div>
     </div>
+
+    <Outlet/>
+
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from './components/Nav';
-import Routing from './components/utils/Routing';
+import Nav from './components/Nav'
+import Routing from './utils/Routing';
 
 function App() {
   
