@@ -1,0 +1,19 @@
+AJAX - Asynchronous JavaScript And XML
+
+API : Application Progaming Interface
+
+AJAX called API
+
+we are calling with AXIOS
+
+to installing axios we are using - npm i axios
+
+
+
+
+after opening page products are not called through API function
+hence use ====> useEffect()
+
+
+
+for install 
