@@ -44,16 +44,19 @@ function Show() {
           products.map((item, index) => (
             <li key={index} className="w-80 h-48 bg-zinc-300 shadow-xl overflow-hidden border-2 rounded-md">
             <div>
-                <div className="w-full flex bg-green-500 justify-between">
-                    <div className="w-full bg-zinc-500 p-3 flex flex-col justify-between">
-                        <div className="font-semibold overflow-hidden h-20 text-zinc-100">{item.title}</div>
-                        <div className="flex gap-3 bg-red-700 text-white px-4 font-semibold">Price : <nav>{item.price}</nav></div>
+                <div className="w-full h-32 flex justify-between bg-zinc-300">
+                    <div className="w-full p-3 flex flex-col justify-between">
+                        <div className="font-semibold overflow-hidden h-20 text-zinc-900 leading-none">{item.title}</div>
+                        <div className="flex gap-3 border  text-white px-4 font-semibold">Price : <nav className="tracking-wider font-normal text-[14px] flex justify-center items-center" >{item.price}</nav></div>
+                        <div className="">
+                          <button className="px-5 py-1 bg-red-600 rounded-lg my-2 text-xs text-white hover:bg-red-700">Add to Cart</button>
+                        </div>
                     </div>
                     <div className="w-[50%] h-32 bg-white flex justify-center items-center p-4">
                         <img className="w-full h-full object-cover" src={item.image}/>
                     </div>
                 </div>
-                <div className="p-1 text-sm h-42 bg-black text-white leading-none text-justify">Description : {item.description} </div>
+                <div className="overflow-auto p-1 h-16 text-xs text-white leading-none text-justify tracking-tighter bg-zinc-500">{item.description} </div>
             </div>
             <div>
 
