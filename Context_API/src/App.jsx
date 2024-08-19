@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import { Link, Route, Routes } from "react-router-dom";
 import User from "./components/User";
 import About from "./components/About";
+import Details from "./components/Details";
 
 function App() {
   const [users, setUsers] = useState([
@@ -27,23 +28,20 @@ function App() {
   ]);
 
   return (
-    <div className="container bg-red-100 pt-1 m-auto">
+    <div className="w-full pt-1 flex items-center flex-col">
       <nav className="mt-10 flex justify-center gap-5 font-semibold">
         <Link to="/">Home</Link>
-        <Link to="/user">User</Link>
+        <Link to="user">User</Link>
         <Link to="/about">About</Link>
       </nav>
 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/user/:id" element={<Details />} />
 
-    <Routes>
-
-      <Route path="/" element={<Home/>} />
-      <Route path="/user" element={<User/>} />
-      <Route path="/about" element={<About/>} />
-
-
-    </Routes>
-
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }
