@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ProductContext } from '../utils/Context'
+import { Link } from 'react-router-dom';
 
 function Nav() {
 
@@ -8,7 +9,7 @@ function Nav() {
     let distinct_category = products && products.reduce((acc,cv)=>[...acc,cv.category],[])
     
     distinct_category = [...new Set(distinct_category)]
-    console.log(distinct_category);
+    // console.log(distinct_category);
     
     
   return (
@@ -21,22 +22,20 @@ function Nav() {
         </a>
         <hr className="w-[80%] my-3" />
         <h1 className="text-2xl mb-3 w-[80%]">Category Filter</h1>
-        <ul className="w-[80%]">
-          <li className="flex items-center mb-3">
-            <span className="w-[15px] h-[15px] bg-blue-100 rounded-full mr-2"></span>{" "}
-            Cat 1
-          </li>
+        <div className="w-[80%]">
 
-          <li className="flex items-center mb-3">
-            <span className="w-[15px] h-[15px] bg-green-100 rounded-full mr-2"></span>{" "}
-            Cat 1
-          </li>
+        
+            {distinct_category.map((c,i)=> (
+                <Link to={`/?category=${c}`} className="flex items-center mb-3">
+                <span className="w-[15px] h-[15px] bg-blue-100 rounded-full mr-2"></span>{" "}
+                {c}
+              </Link>
+            ))}
 
-          <li className="flex items-center mb-3">
-            <span className="w-[15px] h-[15px] bg-red-100 rounded-full mr-2"></span>{" "}
-            Cat 1
-          </li>
-        </ul>
+          
+
+
+        </div>
       </nav>
   )
 }
