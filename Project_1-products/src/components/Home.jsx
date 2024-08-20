@@ -42,12 +42,12 @@ function Home() {
   return products ? (
     <>
       <Nav />
-      <div className="w-[85%] p-10 pt-[5%] flex flex-wrap overflow-x-hidden overflow-y-auto gap-3">
-        {filteredProducts && filteredProducts.map((p, i) => (
+      <div className="w-[85%] p-10 pt-[5%] flex flex-wrap justify-center overflow-x-hidden overflow-y-auto gap-3">
+        {filteredProducts && filteredProducts.map((p ,i) => (
           <Link
             key={i}
             to={`/details/${p.id}`}
-            className="card p-3 border shadow rounded w-[18%] h-[30vh] flex flex-col justify-center items-center"
+            className="card p-3 border shadow rounded w-[18%] min-w-60 h-[30vh] flex flex-col justify-center items-center"
           >
             <div
               className="hover:scale-110 w-full h-[80%] mb-3 bg-contain bg-no-repeat bg-center"
