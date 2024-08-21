@@ -5,14 +5,14 @@ import axios from "../utils/axios";
 import Loading from "./Loading";
 
 function Details() {
-
+  const [products, setproducts] = useContext(ProductContext);
     const [product, setProduct] = useState(null)
 
     const {id} = useParams();
     console.log(id);
     
 
-  const [products] = useContext(ProductContext);
+
 
   const getsingleproduct = async () => {
     try {

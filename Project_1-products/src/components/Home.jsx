@@ -32,7 +32,7 @@ function Home() {
 
 
   useEffect(()=>{
-      if(!filteredProducts) setfilteredProducts(products);
+      if(!filteredProducts || category == "undefined") setfilteredProducts(products);
       if (category != "undefined") getproductscategory();
   },[category,products]);
   
