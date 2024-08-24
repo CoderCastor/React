@@ -10,7 +10,7 @@ function Show() {
     axios
       .get(api)
       .then((products) => {
-        console.log(products);
+        // console.log(products);
         setProducts(products.data);
       })
       .catch((error) => console.log(error));
@@ -20,6 +20,9 @@ function Show() {
     setProducts([]);
     console.log("All products removed");
   };
+
+  console.log(products);
+  
 
   return (
     <div className="flex flex-col items-center px-8">
@@ -40,7 +43,7 @@ function Show() {
 
       <hr className="w-full my-8" />
       <ul className="flex flex-wrap gap-10 items-center justify-center">
-        {products.length > 0 ? (
+        {products.length != 0 ? (
           products.map((item, index) => (
             <li key={index} className="w-80 h-48 bg-zinc-300 shadow-xl overflow-hidden border-2 rounded-md">
             <div>
