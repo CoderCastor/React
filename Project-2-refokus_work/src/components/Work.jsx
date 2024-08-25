@@ -14,7 +14,7 @@ function Work() {
 
     <div className='w-full mt-20'>
         <div className='relative max-w-screen-xl mx-auto text-center'>
-            <h1 className='text-[30vw] leading-none font-medium select-none tracking-tight'>work</h1>
+            <h1 className='text-[30vw] leading-none font-semibold select-none tracking-tight'>work</h1>
             <div className='absolute top-0 w-full h-full'>
                 {images.map((elem,index)=>(elem.isActive && (
                     <img className='w-60 absolute rounded-lg -translate-x-[50%] -translate-y-[50%]' src={elem.url} style={{top: elem.top, left: elem.left}} alt="" srcset="" />
